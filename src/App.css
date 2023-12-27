@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #292793;
+    --pink: #E83283;
+    --white: #f3f3f3;
+    --black: #20201F;
+    --gray: #F2F2F2;
+}
+
+.keyPoints {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: var(--black);
+    font-size: x-large;
+}
+
+@media only screen and (max-width: 400px) {
+    .keyPoints {
+        padding: 2px;
+    }
+
+    /* .point>ion-icon {
+        width: 100% !important;
+        height: 100% !important;
+    } */
+
+    .point {
+        flex-wrap: wrap;
+        width: 150px !important;
+        min-width: 100px !important;
+        flex: 35% !important;
+    }
+}
+
+.point {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 20%;
+    max-width: 25%;
+    align-items: center;
+    min-width: 150px;
+}
+
+.point>ion-icon,
+.achiev>ion-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.achiev {
+    flex: 20%;
+}
+
+.contactUs {
+    background: radial-gradient(#090c1985, #000000), url(/src/assets/8.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.whyUs {
+    background: radial-gradient(#090c1985, #000000), url(/src/assets/2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+}
+
+.whyUs2 {
+    color: white;
+    font-size: medium;
+    padding: 3rem 0;
+}
+
+.whyUs2 {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1110px;
+    flex-wrap: wrap;
+}
+
+.whyUs3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.whyUs4 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1rem;
+    max-width: 250px;
+}
+
+.react-calendar {
+    width: unset;
+}
+
+.react-calendar__tile {
+    font-size: larger;
+}
+
+.steps .step-primary:after {
+    background-color: var(--blue) !important;
+}
+
+.react-calendar__tile--active,
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+    background-color: var(--blue);
+}
+
+.react-calendar__tile:disabled {
+    background-color: transparent;
+    color: rgba(128, 128, 128, 0.192);
+}
+
+.steps .step-primary+.step-primary:before,
+.steps .step-primary:after {
+    transition: .5s all !important;
+    -webkit-transition: .5s all !important;
+    -moz-transition: .5s all !important;
+    -ms-transition: .5s all !important;
+    -o-transition: .5s all !important;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale3D(0.95, 0.95, 0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3D(1, 1, 1);
+    }
+}
+
+
+@keyframes void-animation-out {
+
+    0%,
+    to {
+        opacity: 1;
+    }
+}
+.navbar:nth-of-type(2){
+    background-image: linear-gradient(to bottom, #292793f2, #292793c4, #292793f2), url(./assets/1.jpg);
+    background-size: cover;
+    background-position: center;
+}

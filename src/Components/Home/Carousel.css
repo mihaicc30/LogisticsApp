@@ -1,0 +1,43 @@
+
+#carru  {
+  --image-size: min(max(50px, 10vw), 100px);
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+}
+
+#carru div {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  animation: marquee 16s linear infinite;
+  justify-content: space-around;
+  -webkit-animation: marquee 16s linear infinite;
+}
+
+#carru > div > img {
+  display: block;
+  min-width: var(--image-size);
+  height: var(--image-size);
+  margin: 0 1vw;
+}
+
+@media (max-width: 900px) {
+  #carru  {
+    --image-size: min(max(50px, 10vw), 100px);
+  }
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
